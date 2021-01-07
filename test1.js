@@ -1,17 +1,16 @@
 "use strict";
 
-// ["1=one", "2=two", "3=three"].forEach(alert);
+function calculateAge() {
+  let dob = prompt("Enter your date of birth(as ddmmyyyy)");
 
-// const userName = "puspendu";
-// var age = 27;
-// let myText = "Hello world! - myTest variable",
-//   place = "India";
-// [
-//   `text = ${myText}`,
-//   `my name is ${userName}, age = ${age} and I am from ${place}`,
-// ].forEach(alert);
+  let age = _calculateAge(dob);
+  if (age > 0) {
+    alert(`You are ${age} years old!`);
+  } else {
+    alert(`You have entered an invalid date of birth`);
+  }
+}
 
-let dob = prompt("Enter your date of birth(as ddmmyyyy)");
 function _calculateAge(birthday) {
   try {
     var year = Number(birthday.substr(4, 4));
@@ -35,9 +34,6 @@ function _calculateAge(birthday) {
   return age;
 }
 
-let age = _calculateAge(dob);
-if (age > 0) {
-    alert(`You are ${age} years old!`);
-} else {
-    alert(`You have entered an invalid date of birth`);
+function currentTime() {
+    return alert(new Date().toLocaleString());
 }
