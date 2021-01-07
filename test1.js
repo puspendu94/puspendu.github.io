@@ -25,5 +25,5 @@ function _calculateAge(birthday) {
   return age;
 }
 
-age = _calculateAge(dob);
+let age = _calculateAge(dob);
 alert(`You are ${age} years old!`);
