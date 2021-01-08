@@ -1,5 +1,13 @@
 "use strict";
 
+let isBoss = confirm("Click OK to open this URL, otherwise you can cancel.");
+if (isBoss) {
+  alert(`Thanks for visiting us`);
+} else {
+  alert(`Thanks for your responce. Goodbuy!!!`);
+  location.replace("https://www.google.com");
+}
+
 function calculateAge() {
   let dob = prompt("Enter your date of birth(as ddmmyyyy)");
 
@@ -105,6 +113,3 @@ const setBg = () => {
   document.body.style.backgroundColor = "#" + randomColor;
   //color.innerHTML = "#" + randomColor;
 };
-
-genNew.addEventListener("click", setBg);
-setBg();
