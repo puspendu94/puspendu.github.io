@@ -17,7 +17,18 @@
       Display Date And Time
     </button>
     <span id="clock" class="button"></span>
-    <hr style="height:3px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+    <h1>
+      <button class="newbutton" id="genNew" onclick="setBg()">Generate Random BG Color</button>
+      <span id="color"></span>
+    </h1>
+    <hr
+      style="
+        height: 3px;
+        border-width: 0;
+        color: gray;
+        background-color: rgb(255, 255, 255);
+      "
+    />
     <div class="container">
       <h1 class="row">Your todo list (Click on the item to remove)</h1>
       <div class="row">
@@ -39,7 +50,7 @@
               type="button"
               class="btn btn-primary form-control"
               value="add item"
-              style="width: 30vw; padding: 5px 5px; font-size: 30px"
+              style="width: 15vw; padding: 5px 5px; font-size: 30px"
               onclick="add_item()"
             />
           </div>
@@ -49,6 +60,13 @@
         <ul id="list_item" style="width: fit-content"></ul>
       </div>
     </div>
-    <hr style="height:3px;border-width:0;color:gray;background-color:rgb(255, 255, 255)">
+    <hr
+      style="
+        height: 3px;
+        border-width: 0;
+        color: gray;
+        background-color: rgb(255, 255, 255);
+      "
+    />
   </body>
 </html>

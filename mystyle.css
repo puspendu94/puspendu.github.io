@@ -53,7 +53,7 @@
   border-radius: 15px;
   box-shadow: 5px #999;
   transition: 0.3s;
-  width:fit-content;
+  width: fit-content;
 }
 
 .newbutton:hover {
@@ -68,7 +68,14 @@
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
+/* bg start */
+h1 {
+  background: element("click");
+  padding: 0rem 0rem;
+  text-align: center;
+  width: fit-content;
+}
+/* bg end */
 * {
   padding: 0;
   margin: 0;
@@ -76,15 +83,10 @@
   font-family: cursive;
 }
 
-body {
-  background: #ffd0d0;
-  overflow: auto;
-}
-
 h1 {
   text-align: left;
   margin: 1%;
-  font-size: 1rem;
+  font-size: 2rem;
   /* text-decoration: underline; */
 }
 
