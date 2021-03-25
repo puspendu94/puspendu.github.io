@@ -1,4 +1,7 @@
 "use strict";
+/*
+Important Conversions to string, to number, and to boolean
+*/
 
 let isBoss = confirm("Click OK to open this URL, otherwise you can cancel.");
 if (isBoss) {
@@ -10,7 +13,7 @@ if (isBoss) {
 
 function calculateAge() {
   let dob = prompt("Enter your date of birth(as ddmmyyyy)");
-
+  
   let age = _calculateAge(dob);
   if (age > 0) {
     alert(`You are ${age} years old!`);
@@ -21,17 +24,18 @@ function calculateAge() {
 
 function _calculateAge(birthday) {
   try {
-    var year = Number(birthday.substr(4, 4));
-    var month = Number(birthday.substr(2, 2)) - 1;
-    var day = Number(birthday.substr(0, 2));
+    var retData = {};
+    retData.year = Number(birthday.substr(4, 4));
+    retData.month = Number(birthday.substr(2, 2)) - 1;
+    retData.day = Number(birthday.substr(0, 2));
+    retData = validationChecking(retData);
+
     var today = new Date();
-    var age = today.getFullYear() - year;
-    if (year > today.getFullYear || month > 12 || day > 31) {
-      return NaN;
-    }
+    var age = today.getFullYear() - retData.year;
+    
     if (
-      today.getMonth() < month ||
-      (today.getMonth() == month && today.getDate() < day)
+      today.getMonth() < retData.month || 
+      (today.getMonth() == retData.month && today.getDate() < retData.day)
     ) {
       age--;
     }
@@ -40,6 +44,14 @@ function _calculateAge(birthday) {
     return NaN;
   }
   return age;
+}
+
+function validationChecking(dob_object) {
+  var today = new Date();
+  if (dob_object.year > today.getFullYear || dob_object.month > 12 || dob_object.day > 31) {
+    return NaN;
+  }
+
 }
 
 function currentTime() {
