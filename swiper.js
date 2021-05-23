@@ -1,4 +1,4 @@
-// Code By Webdevtrick ( https://webdevtrick.com )
+
 var timelineSwiper = new Swiper ('.timeline .swiper-container', {
   direction: 'vertical',
   loop: false,
