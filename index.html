@@ -3,61 +3,13 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="mystyle.css" />
-    This is Puspendu
+    Welcome Home
   </head>
   <body>
-    <p>script test...</p>
-
     <script src="test1.js"></script>
-
-    <button class="button" onclick="calculateAge()">
-      <span>Calculate Age </span>
-    </button>
-    <button class="newbutton" onclick="currentTime()">
-      Display Date And Time
-    </button>
-    <span id="clock" class="button"></span>
-    <h1>
-      <button class="newbutton" id="genNew" onclick="setBg()">Change background color</button>
-    </h1>
-    <hr
-      style="
-        height: 3px;
-        border-width: 0;
-        color: gray;
-        background-color: rgb(255, 255, 255);
-      "
-    />
-    <div class="container">
-      <h1 class="row">Your todo list (Click on the item to remove)</h1>
-      <div class="row">
-        <form class="form-inline col-sm-offset-2">
-          <div class="input-group">
-            <span class="input-group-addon">
-              <i class="glyphicon glyphicon-pencil"></i>
-            </span>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="todo-item"
-              id="box"
-              style="width: 30vw; padding: 5px 5px; font-size: 20px"
-            />
-          </div>
-          <div class="form-group newbutton">
-            <input
-              type="button"
-              class="btn btn-primary form-control"
-              value="add item"
-              style="width: 15vw; padding: 5px 5px; font-size: 30px"
-              onclick="add_item()"
-            />
-          </div>
-        </form>
-      </div>
-      <div class="row">
-        <ul id="list_item" style="width: fit-content"></ul>
-      </div>
+    <button class="newbutton" id="genNew" onclick="setBg()">BG</button>
+    <div style="position: absolute; right: 0vmax; background-color: lawngreen">
+      <span id="clock" class="button"></span>
     </div>
     <hr
       style="
@@ -67,5 +19,12 @@
         background-color: rgb(255, 255, 255);
       "
     />
+    <button
+      class="newbutton"
+      style="background-color: blueviolet"
+      onclick="window.open('ggb.htm')"
+    >
+      Governor-Generals of Bengal
+    </button>
   </body>
 </html>

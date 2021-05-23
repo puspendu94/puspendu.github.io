@@ -3,49 +3,6 @@
 Important Conversions to string, to number, and to boolean
 */
 
-let isBoss = confirm("Click OK to open this URL, otherwise you can cancel.");
-if (isBoss) {
-  alert(`Thanks for visiting us`);
-} else {
-  alert(`Thanks for your responce. Goodbuy!!!`);
-  location.replace("https://www.google.com");
-}
-
-function calculateAge() {
-  let dob = prompt("Enter your date of birth(as ddmmyyyy)");
-  
-  let age = _calculateAge(dob);
-  if (age > 0) {
-    alert(`You are ${age} years old!`);
-  } else {
-    alert(`You have entered an invalid date of birth`);
-  }
-}
-
-function _calculateAge(birthday) {
-  try {
-    var retData = {};
-    retData.year = Number(birthday.substr(4, 4));
-    retData.month = Number(birthday.substr(2, 2)) - 1;
-    retData.day = Number(birthday.substr(0, 2));
-    retData = validationChecking(retData);
-
-    var today = new Date();
-    var age = today.getFullYear() - retData.year;
-    
-    if (
-      today.getMonth() < retData.month || 
-      (today.getMonth() == retData.month && today.getDate() < retData.day)
-    ) {
-      age--;
-    }
-  } catch (err) {
-    alert(err);
-    return NaN;
-  }
-  return age;
-}
-
 function validationChecking(dob_object) {
   var today = new Date();
   if (dob_object.year > today.getFullYear || dob_object.month > 12 || dob_object.day > 31) {
@@ -123,5 +80,4 @@ function add_item() {
 const setBg = () => {
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
   document.body.style.backgroundColor = "#" + randomColor;
-  //color.innerHTML = "#" + randomColor;
 };
